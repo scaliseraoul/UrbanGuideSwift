@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		930DF0E12B8226D300D90D73 /* AppleMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930DF0E02B8226D300D90D73 /* AppleMapViewController.swift */; };
+		930DF0E42B822E8500D90D73 /* CocoaMQTT in Frameworks */ = {isa = PBXBuildFile; productRef = 930DF0E32B822E8500D90D73 /* CocoaMQTT */; };
+		930DF0E62B822E8500D90D73 /* CocoaMQTTWebSocket in Frameworks */ = {isa = PBXBuildFile; productRef = 930DF0E52B822E8500D90D73 /* CocoaMQTTWebSocket */; };
+		930DF0E92B82315700D90D73 /* Starscream in Frameworks */ = {isa = PBXBuildFile; productRef = 930DF0E82B82315700D90D73 /* Starscream */; };
+		930DF0EB2B82332D00D90D73 /* MQTTService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930DF0EA2B82332D00D90D73 /* MQTTService.swift */; };
 		932732422B718C9E005C165E /* UrbanGuideApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932732412B718C9E005C165E /* UrbanGuideApp.swift */; };
 		932732442B718C9E005C165E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932732432B718C9E005C165E /* ContentView.swift */; };
 		932732462B718C9F005C165E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 932732452B718C9F005C165E /* Assets.xcassets */; };
@@ -14,6 +19,11 @@
 		932732532B718C9F005C165E /* UrbanGuideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932732522B718C9F005C165E /* UrbanGuideTests.swift */; };
 		9327325D2B718CA0005C165E /* UrbanGuideUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9327325C2B718CA0005C165E /* UrbanGuideUITests.swift */; };
 		9327325F2B718CA0005C165E /* UrbanGuideUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9327325E2B718CA0005C165E /* UrbanGuideUITestsLaunchTests.swift */; };
+		93395DF12B91D09A00F66432 /* AppleMapViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93395DF02B91D09A00F66432 /* AppleMapViewRepresentable.swift */; };
+		93395DF32B91D51A00F66432 /* EventPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93395DF22B91D51A00F66432 /* EventPublisher.swift */; };
+		934657B32B93A127000D74E7 /* MapboxMaps in Frameworks */ = {isa = PBXBuildFile; productRef = 934657B22B93A127000D74E7 /* MapboxMaps */; };
+		934657B52B93A250000D74E7 /* MapboxMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934657B42B93A250000D74E7 /* MapboxMapViewController.swift */; };
+		934657B72B93A44F000D74E7 /* MapboxViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934657B62B93A44F000D74E7 /* MapboxViewRepresentable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		930DF0E02B8226D300D90D73 /* AppleMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleMapViewController.swift; sourceTree = "<group>"; };
+		930DF0EA2B82332D00D90D73 /* MQTTService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQTTService.swift; sourceTree = "<group>"; };
 		9327323E2B718C9E005C165E /* UrbanGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UrbanGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		932732412B718C9E005C165E /* UrbanGuideApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrbanGuideApp.swift; sourceTree = "<group>"; };
 		932732432B718C9E005C165E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,6 +56,11 @@
 		932732582B718CA0005C165E /* UrbanGuideUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UrbanGuideUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9327325C2B718CA0005C165E /* UrbanGuideUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrbanGuideUITests.swift; sourceTree = "<group>"; };
 		9327325E2B718CA0005C165E /* UrbanGuideUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrbanGuideUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		93395DF02B91D09A00F66432 /* AppleMapViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleMapViewRepresentable.swift; sourceTree = "<group>"; };
+		93395DF22B91D51A00F66432 /* EventPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventPublisher.swift; sourceTree = "<group>"; };
+		934657B42B93A250000D74E7 /* MapboxMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapboxMapViewController.swift; sourceTree = "<group>"; };
+		934657B62B93A44F000D74E7 /* MapboxViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapboxViewRepresentable.swift; sourceTree = "<group>"; };
+		938EF3672B9CD3D300D6EA9C /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +68,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				930DF0E62B822E8500D90D73 /* CocoaMQTTWebSocket in Frameworks */,
+				930DF0E42B822E8500D90D73 /* CocoaMQTT in Frameworks */,
+				934657B32B93A127000D74E7 /* MapboxMaps in Frameworks */,
+				930DF0E92B82315700D90D73 /* Starscream in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +95,7 @@
 		932732352B718C9E005C165E = {
 			isa = PBXGroup;
 			children = (
+				938EF3672B9CD3D300D6EA9C /* Config.xcconfig */,
 				932732402B718C9E005C165E /* UrbanGuide */,
 				932732512B718C9F005C165E /* UrbanGuideTests */,
 				9327325B2B718CA0005C165E /* UrbanGuideUITests */,
@@ -98,6 +120,12 @@
 				932732432B718C9E005C165E /* ContentView.swift */,
 				932732452B718C9F005C165E /* Assets.xcassets */,
 				932732472B718C9F005C165E /* Preview Content */,
+				930DF0E02B8226D300D90D73 /* AppleMapViewController.swift */,
+				93395DF02B91D09A00F66432 /* AppleMapViewRepresentable.swift */,
+				930DF0EA2B82332D00D90D73 /* MQTTService.swift */,
+				93395DF22B91D51A00F66432 /* EventPublisher.swift */,
+				934657B42B93A250000D74E7 /* MapboxMapViewController.swift */,
+				934657B62B93A44F000D74E7 /* MapboxViewRepresentable.swift */,
 			);
 			path = UrbanGuide;
 			sourceTree = "<group>";
@@ -143,6 +171,12 @@
 			dependencies = (
 			);
 			name = UrbanGuide;
+			packageProductDependencies = (
+				930DF0E32B822E8500D90D73 /* CocoaMQTT */,
+				930DF0E52B822E8500D90D73 /* CocoaMQTTWebSocket */,
+				930DF0E82B82315700D90D73 /* Starscream */,
+				934657B22B93A127000D74E7 /* MapboxMaps */,
+			);
 			productName = UrbanGuide;
 			productReference = 9327323E2B718C9E005C165E /* UrbanGuide.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +249,11 @@
 				Base,
 			);
 			mainGroup = 932732352B718C9E005C165E;
+			packageReferences = (
+				930DF0E22B822E8500D90D73 /* XCRemoteSwiftPackageReference "CocoaMQTT" */,
+				930DF0E72B82315700D90D73 /* XCRemoteSwiftPackageReference "Starscream" */,
+				934657B12B93A127000D74E7 /* XCRemoteSwiftPackageReference "mapbox-maps-ios" */,
+			);
 			productRefGroup = 9327323F2B718C9E005C165E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,8 +296,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93395DF32B91D51A00F66432 /* EventPublisher.swift in Sources */,
+				934657B72B93A44F000D74E7 /* MapboxViewRepresentable.swift in Sources */,
+				930DF0EB2B82332D00D90D73 /* MQTTService.swift in Sources */,
 				932732442B718C9E005C165E /* ContentView.swift in Sources */,
+				934657B52B93A250000D74E7 /* MapboxMapViewController.swift in Sources */,
 				932732422B718C9E005C165E /* UrbanGuideApp.swift in Sources */,
+				930DF0E12B8226D300D90D73 /* AppleMapViewController.swift in Sources */,
+				93395DF12B91D09A00F66432 /* AppleMapViewRepresentable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +342,7 @@
 /* Begin XCBuildConfiguration section */
 		932732602B718CA0005C165E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 938EF3672B9CD3D300D6EA9C /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -424,6 +470,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"UrbanGuide/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = UrbanGuide/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -452,6 +499,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"UrbanGuide/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = UrbanGuide/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -582,6 +630,56 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		930DF0E22B822E8500D90D73 /* XCRemoteSwiftPackageReference "CocoaMQTT" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/emqtt/CocoaMQTT.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.1.8;
+			};
+		};
+		930DF0E72B82315700D90D73 /* XCRemoteSwiftPackageReference "Starscream" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/daltoniam/Starscream";
+			requirement = {
+				kind = exactVersion;
+				version = 4.0.4;
+			};
+		};
+		934657B12B93A127000D74E7 /* XCRemoteSwiftPackageReference "mapbox-maps-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mapbox/mapbox-maps-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		930DF0E32B822E8500D90D73 /* CocoaMQTT */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 930DF0E22B822E8500D90D73 /* XCRemoteSwiftPackageReference "CocoaMQTT" */;
+			productName = CocoaMQTT;
+		};
+		930DF0E52B822E8500D90D73 /* CocoaMQTTWebSocket */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 930DF0E22B822E8500D90D73 /* XCRemoteSwiftPackageReference "CocoaMQTT" */;
+			productName = CocoaMQTTWebSocket;
+		};
+		930DF0E82B82315700D90D73 /* Starscream */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 930DF0E72B82315700D90D73 /* XCRemoteSwiftPackageReference "Starscream" */;
+			productName = Starscream;
+		};
+		934657B22B93A127000D74E7 /* MapboxMaps */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 934657B12B93A127000D74E7 /* XCRemoteSwiftPackageReference "mapbox-maps-ios" */;
+			productName = MapboxMaps;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 932732362B718C9E005C165E /* Project object */;
 }
