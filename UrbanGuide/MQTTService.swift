@@ -34,8 +34,10 @@ enum Topics {
 }
 
 enum MqttEvent {
-    case MoveMap(position: CLLocationCoordinate2D, topic: String, timestampSent: String)
-    case DrawPoint(title: String, position: CLLocationCoordinate2D, topic: String, timestampSent: String)
+    case MoveMapEvent(position: CLLocationCoordinate2D, topic: String, timestampSent: String)
+    case DrawPointEvent(title: String, position: CLLocationCoordinate2D, topic: String, timestampSent: String)
+    case InAppAlertEvent(text: String, topic: String, timestampSent: String)
+    case InAppNotificationEvent(title: String, text: String, topic: String, timestampSent: String)
 }
 
 class MQTTManager {

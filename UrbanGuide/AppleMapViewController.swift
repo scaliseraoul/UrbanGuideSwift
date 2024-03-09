@@ -54,10 +54,12 @@ class AppleMapViewController: UIViewController, MKMapViewDelegate {
         
         _ = EventPublisher.shared.subscribe { event in
             switch event {
-            case .DrawPoint(title: let title, position: let position, topic: _,timestampSent: let timestampSent):
+            case .DrawPointEvent(title: let title, position: let position, topic: _,timestampSent: let timestampSent):
                 self.addMarker(location: position, title: title,timestampSent: timestampSent)
-            case .MoveMap(position: let position, topic: _, timestampSent: let timestampSent):
+            case .MoveMapEvent(position: let position, topic: _, timestampSent: let timestampSent):
                 self.centerMapOnLocation(location: position,timestampSent: timestampSent)
+            default:
+                break
             }
         }
     }

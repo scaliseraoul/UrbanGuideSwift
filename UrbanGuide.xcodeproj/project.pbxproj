@@ -24,6 +24,9 @@
 		934657B32B93A127000D74E7 /* MapboxMaps in Frameworks */ = {isa = PBXBuildFile; productRef = 934657B22B93A127000D74E7 /* MapboxMaps */; };
 		934657B52B93A250000D74E7 /* MapboxMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934657B42B93A250000D74E7 /* MapboxMapViewController.swift */; };
 		934657B72B93A44F000D74E7 /* MapboxViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934657B62B93A44F000D74E7 /* MapboxViewRepresentable.swift */; };
+		938EF36B2B9CFC2800D6EA9C /* AlertPresenterRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938EF36A2B9CFC2800D6EA9C /* AlertPresenterRepresentable.swift */; };
+		938EF36D2B9CFC3800D6EA9C /* AlertPresenterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938EF36C2B9CFC3800D6EA9C /* AlertPresenterController.swift */; };
+		938EF36F2B9D1D2F00D6EA9C /* NotificationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938EF36E2B9D1D2F00D6EA9C /* NotificationDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +65,9 @@
 		934657B62B93A44F000D74E7 /* MapboxViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapboxViewRepresentable.swift; sourceTree = "<group>"; };
 		938EF3672B9CD3D300D6EA9C /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		938EF3692B9CE5A500D6EA9C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		938EF36A2B9CFC2800D6EA9C /* AlertPresenterRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresenterRepresentable.swift; sourceTree = "<group>"; };
+		938EF36C2B9CFC3800D6EA9C /* AlertPresenterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresenterController.swift; sourceTree = "<group>"; };
+		938EF36E2B9D1D2F00D6EA9C /* NotificationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				932732412B718C9E005C165E /* UrbanGuideApp.swift */,
+				938EF36E2B9D1D2F00D6EA9C /* NotificationDelegate.swift */,
 				932732432B718C9E005C165E /* ContentView.swift */,
 				932732452B718C9F005C165E /* Assets.xcassets */,
 				932732472B718C9F005C165E /* Preview Content */,
@@ -128,6 +135,8 @@
 				93395DF22B91D51A00F66432 /* EventPublisher.swift */,
 				934657B42B93A250000D74E7 /* MapboxMapViewController.swift */,
 				934657B62B93A44F000D74E7 /* MapboxViewRepresentable.swift */,
+				938EF36A2B9CFC2800D6EA9C /* AlertPresenterRepresentable.swift */,
+				938EF36C2B9CFC3800D6EA9C /* AlertPresenterController.swift */,
 			);
 			path = UrbanGuide;
 			sourceTree = "<group>";
@@ -303,8 +312,11 @@
 				930DF0EB2B82332D00D90D73 /* MQTTService.swift in Sources */,
 				932732442B718C9E005C165E /* ContentView.swift in Sources */,
 				934657B52B93A250000D74E7 /* MapboxMapViewController.swift in Sources */,
+				938EF36F2B9D1D2F00D6EA9C /* NotificationDelegate.swift in Sources */,
+				938EF36D2B9CFC3800D6EA9C /* AlertPresenterController.swift in Sources */,
 				932732422B718C9E005C165E /* UrbanGuideApp.swift in Sources */,
 				930DF0E12B8226D300D90D73 /* AppleMapViewController.swift in Sources */,
+				938EF36B2B9CFC2800D6EA9C /* AlertPresenterRepresentable.swift in Sources */,
 				93395DF12B91D09A00F66432 /* AppleMapViewRepresentable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
