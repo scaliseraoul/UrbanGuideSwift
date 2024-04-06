@@ -50,12 +50,15 @@ class AppleMapViewController: UIViewController, MKMapViewDelegate {
     
     private func setupMQTT() {
         mqttManager?.subscribe(to: "\(baseTopic)\(Topics.DrawPoint)Receive")
+        mqttManager?.subscribe(to: "\(baseTopic)\(Topics.DrawPointBatch)Receive")
         mqttManager?.subscribe(to: "\(baseTopic)\(Topics.MoveMap)Receive")
         
         _ = EventPublisher.shared.subscribe { event in
             switch event {
             case .DrawPointEvent(title: let title, position: let position, topic: _,timestampSent: let timestampSent):
                 self.addMarker(location: position, title: title,timestampSent: timestampSent)
+            case .DrawPointBatchEvent(events: let events, timestampSent: let timestampSent):
+                self.addBatchMarkers(events: events, timestampSent: timestampSent)
             case .MoveMapEvent(position: let position, topic: _, timestampSent: let timestampSent):
                 self.centerMapOnLocation(location: position,timestampSent: timestampSent)
             default:
@@ -86,6 +89,27 @@ class AppleMapViewController: UIViewController, MKMapViewDelegate {
         let elapsedTime = Double(nanoTime)
         let mqttPayload = "\(timestampSent),iOS,Swift,AppleMap,\(Topics.DrawPoint),0,0,\(elapsedTime)"
         mqttManager?.publish(message: mqttPayload, to: "\(baseTopic)\(Topics.DrawPoint)Complete")
+        print(mqttPayload)
+    }
+    
+    func addBatchMarkers(events: [MqttEvent], timestampSent: String) {
+        let startTime = DispatchTime.now()
+        
+        
+        events.forEach { mqttEvent in
+            if case .DrawPointEvent(let title, let position, _, _) = mqttEvent {
+                let annotation = MKPointAnnotation()
+                annotation.coordinate = position
+                annotation.title = title
+                mapView.addAnnotation(annotation)
+            }
+        }
+        
+        let endTime = DispatchTime.now()
+        let nanoTime = endTime.uptimeNanoseconds - startTime.uptimeNanoseconds
+        let elapsedTime = Double(nanoTime)
+        let mqttPayload = "\(timestampSent),iOS,Swift,AppleMap,\(Topics.DrawPointBatch),0,0,\(elapsedTime)"
+        mqttManager?.publish(message: mqttPayload, to: "\(baseTopic)\(Topics.DrawPointBatch)Complete")
         print(mqttPayload)
     }
 }

@@ -36,12 +36,15 @@ class MapboxMapViewController: UIViewController {
     
     private func setupMQTT() {
         mqttManager?.subscribe(to: "\(baseTopic)\(Topics.DrawPoint)Receive")
+        mqttManager?.subscribe(to: "\(baseTopic)\(Topics.DrawPointBatch)Receive")
         mqttManager?.subscribe(to: "\(baseTopic)\(Topics.MoveMap)Receive")
         
         _ = EventPublisher.shared.subscribe { event in
             switch event {
             case .DrawPointEvent(title: let title, position: let position, topic: _,timestampSent: let timestampSent):
                 self.addMarker(location: position, title: title,timestampSent: timestampSent)
+            case .DrawPointBatchEvent(events: let events, timestampSent: let timestampSent):
+                self.addBatchMarkers(events: events, timestampSent: timestampSent)
             case .MoveMapEvent(position: let position, topic: _, timestampSent: let timestampSent):
                 self.centerMapOnLocation(location: position,timestampSent: timestampSent)
             default:
@@ -82,6 +85,27 @@ class MapboxMapViewController: UIViewController {
         let elapsedTime = Double(nanoTime)
         let mqttPayload = "\(timestampSent),iOS,Swift,Mapbox,\(Topics.DrawPoint),0,0,\(elapsedTime)"
         mqttManager?.publish(message: mqttPayload, to: "\(baseTopic)\(Topics.DrawPoint)Complete")
+        print(mqttPayload)
+    }
+    
+    func addBatchMarkers(events: [MqttEvent], timestampSent: String) {
+        let startTime = DispatchTime.now()
+        
+        events.forEach { mqttEvent in
+            if case .DrawPointEvent(let title, let location, _, _) = mqttEvent {
+                var pointAnnotation = PointAnnotation(coordinate: location)
+                pointAnnotation.image = .init(image: UIImage(named: "mapbox_marker_icon_20px_blue")!, name: "mapbox_marker_icon_20px_blue")
+                pointAnnotation.textField = title
+                let pointAnnotationManager = mapView.annotations.makePointAnnotationManager()
+                pointAnnotationManager.annotations.append(pointAnnotation)
+            }
+        }
+        
+        let endTime = DispatchTime.now()
+        let nanoTime = endTime.uptimeNanoseconds - startTime.uptimeNanoseconds
+        let elapsedTime = Double(nanoTime)
+        let mqttPayload = "\(timestampSent),iOS,Swift,Mapbox,\(Topics.DrawPointBatch),0,0,\(elapsedTime)"
+        mqttManager?.publish(message: mqttPayload, to: "\(baseTopic)\(Topics.DrawPointBatch)Complete")
         print(mqttPayload)
     }
 }

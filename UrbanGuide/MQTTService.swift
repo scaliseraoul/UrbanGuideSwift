@@ -11,6 +11,7 @@ import MapKit
 
 enum Topics {
     case DrawPoint
+    case DrawPointBatch
     case InAppAlert
     case InAppNotification
     case MoveMap
@@ -18,8 +19,10 @@ enum Topics {
 
     static func fromTopic(_ topic: String?) -> Topics {
         guard let topic = topic else { return .Unmanaged }
-
-        if topic.lowercased().contains("drawpoint") {
+        
+        if topic.lowercased().contains("drawpointbatch") {
+            return .DrawPointBatch
+        } else if topic.lowercased().contains("drawpoint") {
             return .DrawPoint
         } else if topic.lowercased().contains("inappalert") {
             return .InAppAlert
@@ -36,6 +39,7 @@ enum Topics {
 enum MqttEvent {
     case MoveMapEvent(position: CLLocationCoordinate2D, topic: String, timestampSent: String)
     case DrawPointEvent(title: String, position: CLLocationCoordinate2D, topic: String, timestampSent: String)
+    case DrawPointBatchEvent(events: [MqttEvent], timestampSent: String)
     case InAppAlertEvent(text: String, topic: String, timestampSent: String)
     case InAppNotificationEvent(title: String, text: String, topic: String, timestampSent: String)
 }
